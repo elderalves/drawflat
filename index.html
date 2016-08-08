@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Pad</title>
+
+  <link rel="stylesheet" href="font/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="main">
+    <div class="toolbar-box brush-tool">
+      <h1 class="title">Paint Brush</h1>
+      <div class="option-tool">
+        <ul>
+          <li class="toolItem selected" data-option="pen"><i class="flaticon-brush"></i></li>
+          <li class="toolItem" data-option="line"><i class="flaticon-writing"></i></li>
+          <li class="toolItem" data-option="text"><i class="flaticon-interface"></i></li>
+          <li id="rectTool" class="toolItem" data-option="rect"><i class="flaticon-signal"></i></li>
+          <li id="circleTool" class="toolItem" data-option="circle"><i class="flaticon-circle"></i></li>
+          <li id="triangleTool" class="toolItem" data-option="triangle"><i class="flaticon-triangle"></i></li>
+        </ul>
+      </div>
+      <div class="size-tool">
+        <h3>Size</h3>
+        <div class="rangeProgress">
+          <div class="progress"></div>
+          <input id="sizeWidth" type="range" min="4" max="18" step="2" value="6">
+        </div>
+        <h3>Opacity</h3>
+        <div class="rangeProgress">
+          <div class="progress"></div>
+          <input id="opacityValue" type="range" min="0.0" max="1.0" step="0.1" value="1.0">
+        </div>
+        <h3 class="title-disabled">Hardness</h3>
+        <div class="rangeProgress">
+          <div class="progress"></div>
+          <input id="hardValue" type="range" min="4" max="18" step="2" value="4" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar-box color-tool">
+      <h1 class="title">Color</h1>
+      <div class="option-tool">
+        <ul>
+          <li data-color="#ecf0f1"></li>
+          <li data-color="#bdc3c7"></li>
+          <li data-color="#95a5a6"></li>
+          <li data-color="#7f8c8d"></li>
+          <li class="active" data-color="#34495e"></li>
+          <li data-color="#1dd2af"></li>
+          <li data-color="#2ecc71"></li>
+          <li data-color="#3498db"></li>
+          <li data-color="#9b59b6"></li>
+          <li data-color="#f1c40f"></li>
+          <li data-color="#f39c12"></li>
+          <li data-color="#e67e22"></li>
+          <li data-color="#d35400"></li>
+          <li data-color="#e74c3c"></li>
+          <li data-color="#c0392b"></li>
+        </ul>
+      </div>
+    </div>
+    <canvas id="micCanvas" width=600 height="400"></canvas>
+  </div>
+
+  <div id="text-input">
+    <input type="text">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="js/colorTool.js"></script>
+  <script src="js/brushTool.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var artApp = new CanvasApp();
+    artApp.start();
+
+
+
+  </script>
+</body>
+</html>
